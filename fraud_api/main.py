@@ -47,6 +47,10 @@ class Transaction(BaseModel):
 
 app = FastAPI()
 
+@app.get("/")
+def home():
+    return {"message": "Fraud detection API is running!"}
+
 @app.get("/health")
 def health_check():
     return {"status": "ok"}
